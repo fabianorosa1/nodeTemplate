@@ -1,2 +1,2 @@
-# nodeTemplate
-Node.js based MTA Project Starter Template
+# controllerAPI
+Example of the usage of the XS Controller API

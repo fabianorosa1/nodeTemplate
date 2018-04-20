@@ -1,0 +1,33 @@
+ID: <name>
+_schema-version: '2.0'
+version: 0.0.1
+
+modules:
+ - name: web
+   type: html5
+   path: web
+   parameters:
+      host: <name>
+      register-service-url: true
+      service-name: <name>
+      service-url: '${default-url}'
+   requires:
+    - name: <name>-uaa
+    - name: node_api
+      group: destinations
+      properties:
+        name: node-backend
+        url: ~{url}
+        forwardAuthToken: true  
+        
+ - name: node
+   type: nodejs
+   path: node
+   provides:
+    - name: node_api
+      properties:
+         url: ${default-url}
+
+resources:
+ - name: <name>-uaa
+   type: com.sap.xs.uaa
