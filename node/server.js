@@ -4,6 +4,7 @@
 "use strict";
 var xsenv = require("@sap/xsenv");
 var port = process.env.PORT || 3000;
+var server = require("http").createServer();
 global.__base = __dirname + "/";
 
 //Initialize Express App for XSA UAA and HDBEXT Middleware
