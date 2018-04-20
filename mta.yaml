@@ -27,7 +27,9 @@ modules:
     - name: node_api
       properties:
          url: ${default-url}
-
+   requires:
+    - name: <name>-uaa
+    
 resources:
  - name: <name>-uaa
    type: com.sap.xs.uaa
