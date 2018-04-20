@@ -21,4 +21,5 @@ module.exports = function() {
 			<a href="${req.baseUrl}/os">/os</a> - Operating System Information - port of os.xsjs</br>`;*/
 		res.type("text/html").status(200).send(output);
 	});
+	return app;
 };
